@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da6aadc6-e86f-483b-8df7-ae76940a6d68" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +15,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
@@ -78,6 +81,7 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.Main.executor": "Run",
+    "Application.org.toysjourney.Main.executor": "Run",
     "Gradle.Build ToysJourney-gradle.executor": "Run",
     "Gradle.ToysJourney-gradle [:Main.main()].executor": "Run",
     "Gradle.ToysJourney-gradle [build].executor": "Run",
@@ -106,7 +110,7 @@
       <command value="gradle build" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ToysJourney-gradle [jar]">
+  <component name="RunManager" selected="Application.org.toysjourney.Main">
     <configuration name="org.toysjourney.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.toysjourney.Main" />
       <module name="ToysJourney-gradle.main" />
@@ -171,9 +175,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.org.toysjourney.Main" />
         <item itemvalue="Gradle.ToysJourney-gradle [jar]" />
         <item itemvalue="Gradle.ToysJourney-gradle [build]" />
-        <item itemvalue="Application.org.toysjourney.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -195,7 +199,7 @@
       <workItem from="1709062225961" duration="780000" />
       <workItem from="1709063016809" duration="3904000" />
       <workItem from="1709067278756" duration="15000" />
-      <workItem from="1709067405441" duration="2123000" />
+      <workItem from="1709067405441" duration="3018000" />
     </task>
     <servers />
   </component>
