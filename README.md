@@ -6,7 +6,7 @@ I am not the owner or creator of the original project.
 This is a fork of the original project,
 I Just a mentor who is helping a student in 204114 course to make a gradle version of the original project.
 
-Goal of this project is to make a gradle version of the original project.
+Goal of this fork is to make a gradle version of the original project.
 
 ## Original Project
 
