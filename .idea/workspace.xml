@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="da6aadc6-e86f-483b-8df7-ae76940a6d68" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/GamePanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/GameWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/entites/Crabby.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/entites/Enemy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/entites/EnemyManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/entites/Entity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/entites/House.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/entites/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/gamestates/GameState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/gamestates/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/gamestates/Playing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/gamestates/State.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/gamestates/Statemethods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/inputs/KeyboardInputs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/inputs/MouseInputs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/object/GameObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/object/Key.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/object/ObjectManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/object/Potion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/tiles/Tile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/tiles/TileManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/ui/MenuButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/ui/PauseButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/ui/PauseOverlay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/ui/SoundButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/ui/UrmButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/ui/VolumeButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/utilz/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/utilz/DisplayImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/utilz/HelpMethods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/utilz/LoadSave.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Frieren_Animation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/background/flip_masterpiece.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/background/friend_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/background/masterpiece_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/background/menu_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/background/pause_menu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/buttons/button_atlas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/buttons/sound_button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/buttons/urm_buttons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/buttons/volume_buttons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/crabby_sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/house.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/map.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/map.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/objects/Key_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/objects/potions_sprites.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/player3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/player_sprites.png" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2cxnib3NEoQPnIwOfcyyeLvNfyq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Gradle.ToysJourney-gradle [:Main.main()].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "code.cleanup.on.save": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/Users/iccy/Repositories/ToysJourney-gradle/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.org.toysjourney.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="ToysJourney-gradle.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="org.toysjourney.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.toysjourney.Main" />
+      <module name="ToysJourney-gradle.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.toysjourney.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.org.toysjourney.Main" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-322ed176" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="da6aadc6-e86f-483b-8df7-ae76940a6d68" name="Changes" comment="" />
+      <created>1709062224937</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709062224937</updated>
+      <workItem from="1709062225961" duration="780000" />
+      <workItem from="1709063016809" duration="3415000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
