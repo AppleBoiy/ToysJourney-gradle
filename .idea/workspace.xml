@@ -4,70 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da6aadc6-e86f-483b-8df7-ae76940a6d68" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/GamePanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/GameWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/entites/Crabby.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/entites/Enemy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/entites/EnemyManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/entites/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/entites/House.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/entites/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/gamestates/GameState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/gamestates/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/gamestates/Playing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/gamestates/State.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/gamestates/Statemethods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/inputs/KeyboardInputs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/inputs/MouseInputs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/object/GameObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/object/Key.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/object/ObjectManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/object/Potion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/tiles/Tile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/tiles/TileManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/ui/MenuButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/ui/PauseButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/ui/PauseOverlay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/ui/SoundButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/ui/UrmButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/ui/VolumeButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/utilz/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/utilz/DisplayImage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/utilz/HelpMethods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/toysjourney/utilz/LoadSave.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Frieren_Animation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/background/flip_masterpiece.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/background/friend_background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/background/masterpiece_background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/background/menu_background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/background/pause_menu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/buttons/button_atlas.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/buttons/sound_button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/buttons/urm_buttons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/buttons/volume_buttons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/crabby_sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/house.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/objects/Key_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/objects/potions_sprites.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/player3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/player_sprites.png" afterDir="false" />
-    </list>
+    <list default="true" id="da6aadc6-e86f-483b-8df7-ae76940a6d68" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,7 +49,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "code.cleanup.on.save": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -178,7 +115,7 @@
       <option name="presentableId" value="Default" />
       <updated>1709062224937</updated>
       <workItem from="1709062225961" duration="780000" />
-      <workItem from="1709063016809" duration="3415000" />
+      <workItem from="1709063016809" duration="3904000" />
     </task>
     <servers />
   </component>
