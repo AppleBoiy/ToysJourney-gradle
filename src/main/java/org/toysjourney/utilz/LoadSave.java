@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Objects;
 import java.util.Scanner;
 
 interface LoadSaveInterface {
@@ -36,28 +37,13 @@ interface LoadSaveInterface {
 
 public class LoadSave implements LoadSaveInterface {
 
-    public static BufferedImage GetSpriteAtlas(String fileName) {
-        BufferedImage img = null;
-        InputStream is = LoadSave.class.getResourceAsStream("/" + fileName);
-
-
-        try {
-            assert is != null;
-            img = ImageIO.read(is);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-
-        } finally {
-            try {
-                assert is != null;
-                is.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+    public static BufferedImage GetSpriteAtlas(String fileName) throws IOException {
+        try (InputStream is = LoadSave.class.getResourceAsStream("/" + fileName)) {
+            Objects.requireNonNull(is, "Failed to load sprite atlas: " + fileName);
+            return ImageIO.read(is);
         }
-        return img;
     }
+
 
 //	public static ArrayList<Crabby> GetCrabs() {
 //		BufferedImage img = GetSpriteAtlas(TILE_DATA);
@@ -65,38 +51,24 @@ public class LoadSave implements LoadSaveInterface {
 //	}
 
 
-    public static int[][] GetTileData() {
-//		BufferedImage img = GetSpriteAtlas(TILE_DATA);
+    public static int[][] GetTileData() throws FileNotFoundException {
         int[][] tileData = new int[Game.MAP_HEIGHT][Game.MAP_WIDTH];
-        try {
 
-            InputStream is = LoadSave.class.getResourceAsStream(TILE_DATA);
-            File file = new File(TILE_DATA);
-
-            Scanner scanner = new Scanner(file);
-            int col = 0, row = 0;
-            // Loop through each line in the file
+        try (Scanner scanner = new Scanner(new File(TILE_DATA))) {
+            int row = 0;
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
-
                 String[] numbers = line.split(" ");
 
-                for (String number : numbers) {
-                    // Convert the string to an integer
-                    int index = Integer.parseInt(number);
-                    tileData[row][col] = index;
-                    col++;
+                for (int col = 0; col < numbers.length; col++) {
+                    tileData[row][col] = Integer.parseInt(numbers[col]);
                 }
-                col = 0;
                 row++;
             }
-
-            scanner.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         }
 
         return tileData;
     }
+
 
 }

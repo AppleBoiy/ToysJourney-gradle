@@ -8,6 +8,7 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 public class Menu extends State implements Statemethods {
 
@@ -16,14 +17,14 @@ public class Menu extends State implements Statemethods {
     private BufferedImage backgroundImg;
     private int menuX, menuY, menuWidth, menuHeight;
 
-    public Menu(Game game) {
+    public Menu(Game game) throws IOException {
         super(game);
         loadButtons();
 //		loadBackground();
         backgroundImgPic = LoadSave.GetSpriteAtlas(LoadSave.MENU_BACKGROUND_IMG);
     }
 
-    private void loadBackground() {
+    private void loadBackground() throws IOException {
         backgroundImg = LoadSave.GetSpriteAtlas(LoadSave.MENU_BACKGROUND);
         menuWidth = (int) (backgroundImg.getWidth() * Game.SCALE);
         menuHeight = (int) (backgroundImg.getHeight() * Game.SCALE);
@@ -32,7 +33,7 @@ public class Menu extends State implements Statemethods {
 
     }
 
-    private void loadButtons() {
+    private void loadButtons() throws IOException {
         buttons[0] = new MenuButton(Game.SCREEN_WIDTH / 2, (int) (140 * Game.SCALE), 0, GameState.PLAYING); //150
         buttons[1] = new MenuButton(Game.SCREEN_WIDTH / 2, (int) (210 * Game.SCALE), 1, GameState.OPTIONS); //220
         buttons[2] = new MenuButton(Game.SCREEN_WIDTH / 2, (int) (280 * Game.SCALE), 2, GameState.QUIT); //290
@@ -74,7 +75,7 @@ public class Menu extends State implements Statemethods {
         for (MenuButton mb : buttons) {
             if (isIn(e, mb)) {
                 if (mb.isMousePressed())
-                    mb.applyGamestate();
+                    mb.applyGameState();
                 break;
             }
         }
@@ -84,7 +85,7 @@ public class Menu extends State implements Statemethods {
 
     private void resetButtons() {
         for (MenuButton mb : buttons)
-            mb.resetBools();
+            mb.resetBool();
     }
 
     @Override

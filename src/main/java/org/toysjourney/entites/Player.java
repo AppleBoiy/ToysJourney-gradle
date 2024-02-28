@@ -7,18 +7,22 @@ import org.toysjourney.utilz.LoadSave;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 import static org.toysjourney.utilz.Constants.Directions.*;
 import static org.toysjourney.utilz.Constants.PlayerConstants.*;
 
 public class Player extends Entity {
 
+    private final int aniSpeed = 25;
+    private final int atkSpeed = 20; // 15
+    private final float normalplayerSpeed = Game.SCALE;
+    private final float daigonalplayerSpeed = (float) (Game.SCALE / Math.sqrt(2));
+    private final Playing playing;
     public int hasKey;
     private BufferedImage[][] animations;
     private int aniTick;
     private int aniIndex;
-    private final int aniSpeed = 25;
-    private final int atkSpeed = 20; // 15
     private int playerAction = IDLE_FRONT;
     private float cameraX = (float) (25 * Game.TILES_SIZE);
     private float cameraY = (float) (25 * Game.TILES_SIZE);
@@ -27,16 +31,17 @@ public class Player extends Entity {
     private int playerDir = -1; // default at -1 (IDLE)
     private boolean left, up, right, down;
     private boolean moving = false, attacking = false;
-    private final float normalplayerSpeed = Game.SCALE;
-    private final float daigonalplayerSpeed = (float) (Game.SCALE / Math.sqrt(2));
     private int[][] lvlData;
-    private final Playing playing;
 
 
     public Player(float x, float y, int width, int height, Playing playing) {
         super(x, y, width, height);
         this.playing = playing;
-        loadAnimations();
+        try {
+            loadAnimations();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         initHitbox(x, y, width, height);
 
     }
@@ -192,7 +197,7 @@ public class Player extends Entity {
         }
     }
 
-    private void loadAnimations() {
+    private void loadAnimations() throws IOException {
         BufferedImage img = LoadSave.GetSpriteAtlas(LoadSave.FRIEREN);
 
         animations = new BufferedImage[10][8];

@@ -6,6 +6,7 @@ import org.toysjourney.gamestates.GameState;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
+import java.util.Objects;
 
 public class MouseInputs implements MouseListener, MouseMotionListener {
 
@@ -17,13 +18,8 @@ public class MouseInputs implements MouseListener, MouseMotionListener {
 
     @Override
     public void mouseDragged(MouseEvent e) {
-        switch (GameState.state) {
-            case PLAYING:
-                gamePanel.getGame().getPlaying().mouseDragged(e);
-                break;
-            default:
-                break;
-
+        if (Objects.requireNonNull(GameState.state) == GameState.PLAYING) {
+            gamePanel.getGame().getPlaying().mouseDragged(e);
         }
 
     }
@@ -46,13 +42,8 @@ public class MouseInputs implements MouseListener, MouseMotionListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        switch (GameState.state) {
-            case PLAYING:
-                gamePanel.getGame().getPlaying().mouseClicked(e);
-                break;
-            default:
-                break;
-
+        if (Objects.requireNonNull(GameState.state) == GameState.PLAYING) {
+            gamePanel.getGame().getPlaying().mouseClicked(e);
         }
 
     }

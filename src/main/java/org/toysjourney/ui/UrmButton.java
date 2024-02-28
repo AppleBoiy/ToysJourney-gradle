@@ -4,27 +4,28 @@ import org.toysjourney.utilz.LoadSave;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 import static org.toysjourney.utilz.Constants.UI.URMButtons.URM_DEFAULT_SIZE;
 import static org.toysjourney.utilz.Constants.UI.URMButtons.URM_SIZE;
 
 public class UrmButton extends PauseButton {
-    private BufferedImage[] imgs;
     private final int rowIndex;
+    private BufferedImage[] images;
     private int index;
     private boolean mouseOver, mousePressed;
 
-    public UrmButton(int x, int y, int width, int height, int rowIndex) {
+    public UrmButton(int x, int y, int width, int height, int rowIndex) throws IOException {
         super(x, y, width, height);
         this.rowIndex = rowIndex;
-        loadImgs();
+        loadImg();
     }
 
-    private void loadImgs() {
+    private void loadImg() throws IOException {
         BufferedImage temp = LoadSave.GetSpriteAtlas(LoadSave.URM_BUTTONS);
-        imgs = new BufferedImage[3];
-        for (int i = 0; i < imgs.length; i++)
-            imgs[i] = temp.getSubimage(i * URM_DEFAULT_SIZE, rowIndex * URM_DEFAULT_SIZE, URM_DEFAULT_SIZE, URM_DEFAULT_SIZE);
+        images = new BufferedImage[3];
+        for (int i = 0; i < images.length; i++)
+            images[i] = temp.getSubimage(i * URM_DEFAULT_SIZE, rowIndex * URM_DEFAULT_SIZE, URM_DEFAULT_SIZE, URM_DEFAULT_SIZE);
 
     }
 
@@ -37,11 +38,11 @@ public class UrmButton extends PauseButton {
     }
 
     public void draw(Graphics g) {
-        g.drawImage(imgs[index], x, y, URM_SIZE, URM_SIZE, null);
+        g.drawImage(images[index], x, y, URM_SIZE, URM_SIZE, null);
 
     }
 
-    public void resetBools() {
+    public void resetBool() {
         mouseOver = false;
         mousePressed = false;
     }

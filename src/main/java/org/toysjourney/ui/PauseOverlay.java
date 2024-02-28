@@ -8,6 +8,7 @@ import org.toysjourney.utilz.LoadSave;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 import static org.toysjourney.utilz.Constants.UI.PauseButtons.SOUND_SIZE;
 import static org.toysjourney.utilz.Constants.UI.URMButtons.URM_SIZE;
@@ -26,24 +27,28 @@ public class PauseOverlay {
 
     public PauseOverlay(Playing playing) {
         this.playing = playing;
-        loadBackground();
-        createSoundButtons();
-        createUrmButtons();
-        createVolumeButton();
-
+        try {
+            loadBackground();
+            createSoundButtons();
+            createUrmButtons();
+            createVolumeButton();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-    private void createVolumeButton() {
+    private void createVolumeButton() throws IOException {
         int vX = (int) (309 * Game.SCALE);
         int vY = (int) (278 * Game.SCALE);
         volumeButton = new VolumeButton(vX, vY, SLIDER_WIDTH, VOLUME_HEIGHT);
     }
 
-    private void createUrmButtons() {
+    private void createUrmButtons() throws IOException {
         int menuX = (int) (313 * Game.SCALE);
         int replayX = (int) (387 * Game.SCALE);
         int unpauseX = (int) (462 * Game.SCALE);
         int bY = (int) (325 * Game.SCALE);
+
 
         menuB = new UrmButton(menuX, bY, URM_SIZE, URM_SIZE, 2);
         replayB = new UrmButton(replayX, bY, URM_SIZE, URM_SIZE, 1);
@@ -61,7 +66,7 @@ public class PauseOverlay {
 
     }
 
-    private void loadBackground() {
+    private void loadBackground() throws IOException {
         backgroundImg = LoadSave.GetSpriteAtlas(LoadSave.PAUSE_BACKGROUND);
         bgW = (int) (backgroundImg.getWidth() * Game.SCALE);
         bgH = (int) (backgroundImg.getHeight() * Game.SCALE);
@@ -144,12 +149,12 @@ public class PauseOverlay {
                 playing.unpauseGame();
         }
 
-        musicButton.resetBools();
-        sfxButton.resetBools();
-        menuB.resetBools();
-        replayB.resetBools();
-        unpauseB.resetBools();
-        volumeButton.resetBools();
+        musicButton.resetBool();
+        sfxButton.resetBool();
+        menuB.resetBool();
+        replayB.resetBool();
+        unpauseB.resetBool();
+        volumeButton.resetBool();
 
     }
 

@@ -5,6 +5,7 @@ import org.toysjourney.utilz.LoadSave;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 import static org.toysjourney.utilz.Constants.UI.Buttons.*;
 
@@ -13,19 +14,19 @@ public class MenuButton {
     private final int xPos;
     private final int yPos;
     private final int rowIndex;
-    private int index;
     private final int xOffsetCenter = B_WIDTH / 2;
     private final GameState state;
+    private int index;
     private BufferedImage[] imgs;
     private Boolean mouseOver = false, mousePressed = false;
     private Rectangle bounds;
 
-    public MenuButton(int xPos, int yPos, int rowIndex, GameState state) {
+    public MenuButton(int xPos, int yPos, int rowIndex, GameState state) throws IOException {
         this.xPos = xPos;
         this.yPos = yPos;
         this.rowIndex = rowIndex;
         this.state = state;
-        loadImgs();
+        loadImg();
         initBound();
     }
 
@@ -34,7 +35,7 @@ public class MenuButton {
 
     }
 
-    private void loadImgs() {
+    private void loadImg() throws IOException {
         imgs = new BufferedImage[3];
         BufferedImage temp = LoadSave.GetSpriteAtlas(LoadSave.MENU_BUTTONS);
         for (int i = 0; i < imgs.length; i++)
@@ -74,11 +75,11 @@ public class MenuButton {
         return bounds;
     }
 
-    public void applyGamestate() {
+    public void applyGameState() {
         GameState.state = state;
     }
 
-    public void resetBools() {
+    public void resetBool() {
         mouseOver = false;
         mousePressed = false;
     }

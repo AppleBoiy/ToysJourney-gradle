@@ -5,6 +5,7 @@ import org.toysjourney.gamestates.Menu;
 import org.toysjourney.gamestates.Playing;
 
 import java.awt.*;
+import java.io.IOException;
 
 interface GameConstants {
     int TILES_DEFAULT_SIZE = 32;
@@ -16,8 +17,6 @@ interface GameConstants {
     int PLAYER_SIZE = (int) (50 * 0.76);
     int PLAYER_WIDTH = (int) (31 * 0.76);
     int PLAYER_HEIGHT = (int) (42 * 0.76);
-    int PLAYER_HITBOX_WIDTH = 0;
-    int PLAYER_HITBOX_HEIGHT = 0;
 
     int FPS_SET = 120;
     int UPS_SET = 200;
@@ -29,24 +28,22 @@ public class Game implements Runnable, GameConstants {
     public final static int SCREEN_WIDTH = TILES_SIZE * TILES_IN_WIDTH; //1280
     public final static int SCREEN_HEIGHT = TILES_SIZE * TILES_IN_HEIGHT; //720
 
-    private final GameWindow gameWindow;
     private final GamePanel gamePanel;
-    private Thread gameThread;
     private Playing playing;
     private Menu menu;
 
 
-    public Game() {
+    public Game() throws IOException {
         initClasses();
 
         gamePanel = new GamePanel(this);
-        gameWindow = new GameWindow(gamePanel);
+        GameWindow gameWindow = new GameWindow(gamePanel);
         gamePanel.requestFocus();
 
         startGameLoop();
     }
 
-    private void initClasses() {
+    private void initClasses() throws IOException {
 
         menu = new Menu(this);
         playing = new Playing(this);
@@ -54,7 +51,7 @@ public class Game implements Runnable, GameConstants {
     }
 
     private void startGameLoop() {
-        gameThread = new Thread(this);
+        Thread gameThread = new Thread(this);
         gameThread.start();
     }
 

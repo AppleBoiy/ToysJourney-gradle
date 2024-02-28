@@ -24,15 +24,13 @@ public class Constants {
         public static final int KEY_WIDTH = (int) (Game.SCALE * KEY_WIDTH_DEFAULT);
         public static final int KEY_HEIGHT = (int) (Game.SCALE * KEY_HEIGHT_DEFAULT);
 
-        public static final int GetSpriteAmount(int object_type) {
-            switch (object_type) {
-                case RED_POTION, BLUE_POTION:
-                    return 7;
-                case KEY_1:
-                    return 8;
-            }
+        public static int GetSpriteAmount(int object_type) {
+            return switch (object_type) {
+                case RED_POTION, BLUE_POTION -> 7;
+                case KEY_1 -> 8;
+                default -> 1;
+            };
 
-            return 1;
         }
     }
 
@@ -53,20 +51,19 @@ public class Constants {
 
         public static int getSpriteAmount(int enemy_type, int enemy_state) {
 
-            switch (enemy_type) {
-                case CRABBY:
-                    switch (enemy_state) {
-                        case IDLE:
-                            return 9;
-                        case RUNNING:
-                            return 6;
-                        case ATTACK:
-                            return 7;
-                        case HIT:
-                            return 4;
-                        case DEAD:
-                            return 5;
-                    }
+            if (enemy_type == CRABBY) {
+                switch (enemy_state) {
+                    case IDLE:
+                        return 9;
+                    case RUNNING:
+                        return 6;
+                    case ATTACK:
+                        return 7;
+                    case HIT:
+                        return 4;
+                    case DEAD:
+                        return 5;
+                }
             }
 
             return 0;
@@ -126,32 +123,19 @@ public class Constants {
 
         public static int GetSpriteAmount(int player_action) {
 
-            switch (player_action) {
-                case IDLE_FRONT:
-                    return 5;
-                case IDLE_RIGHT:
-                    return 5;
-                case IDLE_LEFT:
-                    return 5;
-                case IDLE_BACK:
-                    return 5;
-                case RUN_FRONT:
-                    return 6;
-                case RUN_RIGHT:
-                    return 6;
-                case RUN_LEFT:
-                    return 6;
-                case RUN_BACK:
-                    return 6;
-                case ATK_RIGHT:
-                    return 8;
-                case ATK_LEFT:
-                    return 8;
-                default:
-                    return 0;
-
-
-            }
+            return switch (player_action) {
+                case IDLE_FRONT -> 5;
+                case IDLE_RIGHT -> 5;
+                case IDLE_LEFT -> 5;
+                case IDLE_BACK -> 5;
+                case RUN_FRONT -> 6;
+                case RUN_RIGHT -> 6;
+                case RUN_LEFT -> 6;
+                case RUN_BACK -> 6;
+                case ATK_RIGHT -> 8;
+                case ATK_LEFT -> 8;
+                default -> 0;
+            };
 
         }
 

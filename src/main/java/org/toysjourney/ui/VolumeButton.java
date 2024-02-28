@@ -5,20 +5,21 @@ import org.toysjourney.utilz.LoadSave;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 import static org.toysjourney.utilz.Constants.UI.VolumeButtons.*;
 
 public class VolumeButton extends PauseButton {
 
-    private BufferedImage[] imgs;
+    private final int minX;
+    private final int maxX;
+    private BufferedImage[] images;
     private BufferedImage slider;
     private int index = 0;
     private boolean mouseOver, mousePressed;
     private int buttonX;
-    private final int minX;
-    private final int maxX;
 
-    public VolumeButton(int x, int y, int width, int height) {
+    public VolumeButton(int x, int y, int width, int height) throws IOException {
         super(x + width / 2, y, VOLUME_WIDTH, height);
         bounds.x -= VOLUME_WIDTH / 2;
         buttonX = x + width / 2;
@@ -26,14 +27,14 @@ public class VolumeButton extends PauseButton {
         this.width = width;
         minX = x + VOLUME_WIDTH / 2;
         maxX = x + width - VOLUME_WIDTH / 2;
-        loadImgs();
+        loadImg();
     }
 
-    private void loadImgs() {
+    private void loadImg() throws IOException {
         BufferedImage temp = LoadSave.GetSpriteAtlas(LoadSave.VOLUME_BUTTONS);
-        imgs = new BufferedImage[3];
-        for (int i = 0; i < imgs.length; i++)
-            imgs[i] = temp.getSubimage(i * VOLUME_DEFAULT_WIDTH, 0, VOLUME_DEFAULT_WIDTH, VOLUME_DEFAULT_HEIGHT);
+        images = new BufferedImage[3];
+        for (int i = 0; i < images.length; i++)
+            images[i] = temp.getSubimage(i * VOLUME_DEFAULT_WIDTH, 0, VOLUME_DEFAULT_WIDTH, VOLUME_DEFAULT_HEIGHT);
 
         slider = temp.getSubimage(3 * VOLUME_DEFAULT_WIDTH, 0, SLIDER_DEFAULT_WIDTH, VOLUME_DEFAULT_HEIGHT);
 
@@ -52,7 +53,7 @@ public class VolumeButton extends PauseButton {
     public void draw(Graphics g) {
 
         g.drawImage(slider, x, y, width, height, null);
-        g.drawImage(imgs[index], buttonX - VOLUME_WIDTH / 2, y, VOLUME_WIDTH, height, null);
+        g.drawImage(images[index], buttonX - VOLUME_WIDTH / 2, y, VOLUME_WIDTH, height, null);
 
     }
 
@@ -67,7 +68,7 @@ public class VolumeButton extends PauseButton {
         bounds.x = buttonX - VOLUME_WIDTH / 2;
     }
 
-    public void resetBools() {
+    public void resetBool() {
         mouseOver = false;
         mousePressed = false;
     }

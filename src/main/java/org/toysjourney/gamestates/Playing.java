@@ -11,6 +11,7 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.geom.Rectangle2D;
+import java.io.IOException;
 
 public class Playing extends State implements Statemethods {
     private Player player;
@@ -23,17 +24,17 @@ public class Playing extends State implements Statemethods {
     private boolean paused = false;
 
 
-    public Playing(Game game) {
+    public Playing(Game game) throws IOException {
         super(game);
         initClasses();
     }
 
-    private void initClasses() {
+    private void initClasses() throws IOException {
         tileManager = new TileManager(game);
         house = new House(new Point(2800, 1856 + 35));
         player = new Player(((float) Game.SCREEN_WIDTH / 2) - (Game.PLAYER_SIZE * Game.SCALE / 2), (Game.SCREEN_HEIGHT / 2) - (Game.PLAYER_SIZE * Game.SCALE / 2), (int) ((Game.PLAYER_WIDTH - 5) * Game.SCALE), (int) ((Game.PLAYER_HEIGHT) * Game.SCALE), this);
         objectManager = new ObjectManager(this);
-        player.loadLvlData(tileManager.getCurrentTile().getTileData());
+        player.loadLvlData(tileManager.getCurrentTile().tileData());
         pauseOverlay = new PauseOverlay(this);
 
     }
@@ -49,7 +50,7 @@ public class Playing extends State implements Statemethods {
         }
 
 
-        tileManager.setCameravalues(player.getCameraX(), player.getCameraY());
+        tileManager.setCameraValues(player.getCameraX(), player.getCameraY());
         house.setCameraValues(player.getCameraX(), player.getCameraY());
         objectManager.setCameraValues(player.getCameraX(), player.getCameraY());
 

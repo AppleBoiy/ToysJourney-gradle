@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    static void TestImg() {
+    static void TestImg() throws Exception {
         System.out.println("Test import images from LoadSave.GetSpriteAtlas(LoadSave.MENU_BUTTONS) in MenuButton.java");
 
         final String MENU_BUTTONS = "buttons/button_atlas.png";
@@ -58,7 +58,11 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        new Game();
+        try {
+            new Game();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 

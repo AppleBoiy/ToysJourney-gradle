@@ -7,26 +7,26 @@ import java.awt.geom.Rectangle2D;
 
 public class HelpMethods {
 
-    public static boolean CanWalkHere(Rectangle2D hitbox, Float x, Float y, int[][] lvlData) {
-        if (x - hitbox.getWidth() / 2 < 0 || y - hitbox.getHeight() / 2 < 0)
+    public static boolean CanWalkHere(Rectangle2D hitBox, Float x, Float y, int[][] lvlData) {
+        if (x - hitBox.getWidth() / 2 < 0 || y - hitBox.getHeight() / 2 < 0)
             return false;
 
-        if (x + hitbox.getWidth() / 2 >= Game.MAP_WIDTH * Game.TILES_SIZE || y + hitbox.getHeight() / 2 >= Game.MAP_HEIGHT * Game.TILES_SIZE)
+        if (x + hitBox.getWidth() / 2 >= Game.MAP_WIDTH * Game.TILES_SIZE || y + hitBox.getHeight() / 2 >= Game.MAP_HEIGHT * Game.TILES_SIZE)
             return false;
 
-        Point[] tileCords = GetTileCords(hitbox, x, y);
+        Point[] tileCords = GetTileCords(hitBox, x, y);
         int[] tileIds = GetTileIds(tileCords, lvlData);
         return isTileWalkable(tileIds);
     }
 
-    private static Point[] GetTileCords(Rectangle2D hitbox, float x, float y) {
+    private static Point[] GetTileCords(Rectangle2D hitBox, float x, float y) {
         Point[] tileCords = new Point[4];
         //System.out.println(x + " : " + y);
 
-        int left = (int) ((x - hitbox.getWidth() / 2) / Game.TILES_SIZE);
-        int right = (int) ((x + hitbox.getWidth() / 2) / Game.TILES_SIZE);
+        int left = (int) ((x - hitBox.getWidth() / 2) / Game.TILES_SIZE);
+        int right = (int) ((x + hitBox.getWidth() / 2) / Game.TILES_SIZE);
         int top = (int) ((y) / Game.TILES_SIZE);
-        int bottom = (int) ((y + hitbox.getHeight() / 2) / Game.TILES_SIZE);
+        int bottom = (int) ((y + hitBox.getHeight() / 2) / Game.TILES_SIZE);
 
         tileCords[0] = new Point(left, top);
         tileCords[1] = new Point(right, top);
